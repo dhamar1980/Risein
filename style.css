@@ -1,32 +1,54 @@
 :root{
-  --primary:#0d6efd;
-  --muted:#6c757d;
+  --primary: #0d6efd;
+  --bg-grad-1: #f8fafc;
+  --bg-grad-2: #eef2ff;
+  --muted: #6c757d;
 }
+
+html,body{height:100%;}
 body{
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-  color: #222;
-}
-.hero{ 
-  background: linear-gradient(90deg, rgba(13,110,253,0.06), rgba(13,110,253,0.02));
-}
-.stats-card{ 
-  border-radius: 12px;
-}
-.card{ 
-  border-radius: 12px;
-}
-footer{
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-@media (max-width:576px){
-  .hero{padding:2rem 1rem}
+  background: linear-gradient(180deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 100%);
+  color: #0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* Small helpers */
-.text-primary{ color: var(--primary) !important; }
-.btn-outline-primary{ border-radius: 8px; }
-.btn-primary, .btn-success{ border-radius: 8px; }
+.hero{
+  background: linear-gradient(90deg, rgba(13,110,253,0.04), rgba(13,110,253,0.01));
+}
+
+.stats-card{
+  border-radius: 12px;
+}
+
+.card{
+  border-radius: 12px;
+}
+
+/* Glassy white used for cards on hero */
+.bg-white-90{ background-color: rgba(255,255,255,0.92); }
+
+footer{ border-top: 1px solid rgba(255,255,255,0.03); }
+
+@media (max-width:576px){
+  .hero{ padding: 2rem 1rem; }
+}
+
+/* Buttons and small helpers */
+.btn-outline-primary{ border-radius: 8px; padding-left: 0.85rem; padding-right: 0.85rem; }
+.btn-primary, .btn-success{ border-radius: 10px; }
+
+/* Elevation */
+.shadow-lg{ box-shadow: 0 10px 30px rgba(16,24,40,0.08) !important; }
 
 /* Accessibility: focus outlines */
-button:focus, a:focus{ outline: 3px solid rgba(13,110,253,0.18); outline-offset: 2px; }
+button:focus, a:focus{ outline: 3px solid rgba(13,110,253,0.14); outline-offset: 3px; }
+
+/* Small responsive tweaks for cards */
+@media (max-width:768px){
+  .stats-card{ margin-top: .5rem; }
+}
+
+/* Utility tweaks for icon sizes */
+.bi{ vertical-align: -.125em; }
