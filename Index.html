@@ -1,78 +1,127 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rise In - Latihan Rumahan Terbaik</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rise In - Latihan Rumahan Terbaik</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoY9qYF0sA7MsXsP1a6uYjU7B4zYx04ecmZBf8QNH0fQ2J" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">
-            <h1>Rise In</h1>
-            <p>Latihan Rumahan</p>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#workouts">Latihan</a></li>
-                <li><a href="#progress">Progress</a></li>
-                <li><a href="#profile">Profil</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <span class="fs-4 fw-bold">Rise In</span>
+                    <small class="text-light ms-2">Latihan Rumahan</small>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#workouts">Latihan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#progress">Progress</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#profile">Profil</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <button class="menu-toggle">Menu</button>
-    </header>
 
-    <main class="app-content">
-        
-        <section id="dashboard" class="page-section active-page">
-            <h2>Selamat Datang, [Nama Pengguna]!</h2>
-            <p>Mari kita mulai latihan hari ini.</p>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3>Latihan yang Direkomendasikan</h3>
-                    <p>Latihan Kaki dan Perut Intensitas Menengah</p>
-                    <button class="btn-primary">Mulai Latihan</button>
-                </div>
-                <div class="card progress-summary">
-                    <h3>Ringkasan Progress</h3>
-                    <p>Minggu ini: <strong>3</strong> Latihan Selesai</p>
-                    <p>Total Kalori Terbakar: <strong>450</strong> kcal</p>
+        <header class="hero bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <h1 class="display-5">Selamat Datang, <span class="text-primary">[Nama Pengguna]</span>!</h1>
+                        <p class="lead">Mulai rutinitas latihanmu hari ini — mudah, efektif, dan bisa dilakukan di rumah.</p>
+                        <a href="#workouts" class="btn btn-primary btn-lg me-2">Mulai Latihan</a>
+                        <a href="#progress" class="btn btn-outline-primary btn-lg">Lihat Progress</a>
+                    </div>
+                    <div class="col-md-5 mt-4 mt-md-0">
+                        <div class="card shadow-sm stats-card p-3">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h6 class="text-muted mb-1">Latihan Minggu Ini</h6>
+                                    <p class="h2 mb-0">3</p>
+                                </div>
+                                <div class="text-end">
+                                    <h6 class="text-muted mb-1">Kalori</h6>
+                                    <p class="h2 mb-0">450 kcal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="quick-links">
-                <h3>Akses Cepat</h3>
-                <a href="#workouts" class="quick-link-btn">Jelajahi Semua Latihan</a>
-                <a href="#history" class="quick-link-btn">Riwayat Latihan</a>
+        </header>
+
+        <main class="container my-5">
+            <section id="dashboard">
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title">Latihan yang Direkomendasikan</h3>
+                                <p class="card-text">Latihan Kaki dan Perut — Intensitas Menengah. Fokus pada teknik, lakukan 3 set masing-masing 12-15 repetisi.</p>
+                                <a class="btn btn-success" href="#workouts">Mulai Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 text-white bg-primary shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Ringkasan Progress</h5>
+                                <p class="card-text mb-1">Minggu ini: <strong>3</strong> Latihan Selesai</p>
+                                <p class="card-text">Total Kalori Terbakar: <strong>450</strong> kcal</p>
+                                <a href="#progress" class="btn btn-light btn-sm mt-2">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="workouts" class="mt-5">
+                <h2 class="mb-4">Pilih Latihan</h2>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">HIIT Kardio 20 Menit</h5>
+                                <p class="card-text">Durasi: 20 menit | Tingkat: Sulit — latihan interval untuk kalori maksimal.</p>
+                                <a class="btn btn-outline-primary" href="#">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Yoga Pagi Pemula</h5>
+                                <p class="card-text">Durasi: 30 menit | Tingkat: Mudah — pemulihan & fleksibilitas.</p>
+                                <a class="btn btn-outline-primary" href="#">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="progress" class="mt-5">
+                <h2 class="mb-3">Progress Saya</h2>
+                <p class="text-muted">Data grafik progress akan ditampilkan di sini (tempatkan chart di masa depan).</p>
+            </section>
+        </main>
+
+        <footer class="bg-dark text-light py-4">
+            <div class="container d-flex justify-content-between align-items-center">
+                <small>&copy; 2025 Rise In. Semua Hak Dilindungi.</small>
+                <div>
+                    <a class="text-light me-3" href="#">Twitter</a>
+                    <a class="text-light me-3" href="#">Instagram</a>
+                    <a class="text-light" href="#">Facebook</a>
+                </div>
             </div>
-        </section>
+        </footer>
 
-        <section id="workouts" class="page-section hidden-page">
-            <h2>Pilih Latihan</h2>
-            <div class="workout-list">
-                <div class="workout-item">
-                    <h4>HIIT Kardio 20 Menit</h4>
-                    <p>Durasi: 20 menit | Tingkat: Sulit</p>
-                    <button class="btn-secondary">Lihat Detail</button>
-                </div>
-                <div class="workout-item">
-                    <h4>Yoga Pagi Pemula</h4>
-                    <p>Durasi: 30 menit | Tingkat: Mudah</p>
-                    <button class="btn-secondary">Lihat Detail</button>
-                </div>
-                </div>
-        </section>
-
-        <section id="progress" class="page-section hidden-page">
-            <h2>Progress Saya</h2>
-            <p>Data grafik progress akan ditampilkan di sini.</p>
-        </section>
-
-    </main>
-    
-    <footer class="main-footer">
-        <p>&copy; 2025 Rise In. Semua Hak Dilindungi.</p>
-        <div class="social-links">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+AMvyTG2x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

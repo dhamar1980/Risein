@@ -1,0 +1,32 @@
+:root{
+  --primary:#0d6efd;
+  --muted:#6c757d;
+}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  color: #222;
+}
+.hero{ 
+  background: linear-gradient(90deg, rgba(13,110,253,0.06), rgba(13,110,253,0.02));
+}
+.stats-card{ 
+  border-radius: 12px;
+}
+.card{ 
+  border-radius: 12px;
+}
+footer{
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+@media (max-width:576px){
+  .hero{padding:2rem 1rem}
+}
+
+/* Small helpers */
+.text-primary{ color: var(--primary) !important; }
+.btn-outline-primary{ border-radius: 8px; }
+.btn-primary, .btn-success{ border-radius: 8px; }
+
+/* Accessibility: focus outlines */
+button:focus, a:focus{ outline: 3px solid rgba(13,110,253,0.18); outline-offset: 2px; }
